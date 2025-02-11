@@ -10,9 +10,9 @@ public class FruitController {
     private final AtomicLong atomicLong = new AtomicLong();
 
     @GetMapping("/fruits")
-    public Fruits fruits(
+    public Shopping fruits(
             @RequestParam(value = "fruit_name", defaultValue = "Mango") String fruitName,
             @RequestParam(value = "season", defaultValue = "Summer") String season) {
-        return new Fruits(atomicLong.incrementAndGet(), fruitName, season);
+        return new Shopping(atomicLong.incrementAndGet(), fruitName, season);
     }
 }
